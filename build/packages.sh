@@ -13,7 +13,7 @@ dnf5 -y install \
     fish \
     lnav \
     ncdu \
-    pcp \
+    pcp-zeroconf \
     rclone \
     restic \
     ugrep \
