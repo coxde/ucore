@@ -13,7 +13,8 @@ dnf5 -y install \
     fish \
     lnav \
     ncdu \
-    ugrep \
-    zoxide \
+    pcp \
     rclone \
-    restic
+    restic \
+    ugrep \
+    zoxide
