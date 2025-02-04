@@ -20,7 +20,7 @@ TS_NO_LOGS_NO_SUPPORT=true
 EOF
 
 # Enable Firewalld logging
-firewall-cmd --set-log-denied=all
+sed -i 's/\s*LogDenied=.*$/LogDenied=all/g' /etc/firewalld/firewalld.conf
 
 # Enable services
 systemctl enable tailscaled.service
