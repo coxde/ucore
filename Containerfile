@@ -3,7 +3,7 @@ FROM scratch AS ctx
 COPY / /
 
 # Base image
-FROM ghcr.io/ublue-os/ucore-minimal:stable AS base
+FROM ghcr.io/ublue-os/ucore:stable AS base
 
 # Environments
 ARG IMAGE_NAME="${IMAGE_NAME:-ucore}"

@@ -24,8 +24,8 @@ sed -i 's/\s*LogDenied=.*$/LogDenied=all/g' /etc/firewalld/firewalld.conf
 
 # Enable services
 systemctl enable tailscaled.service
-systemctl enable docker.service
 systemctl enable cockpit.service
+systemctl enable docker.service
 
 # Clean temp files
 # Enable extended globbing
