@@ -5,7 +5,9 @@ set -ouex pipefail
 # Install packages
 dnf5 -y install \
     btop \
+    cockpit \
     cockpit-files \
+    cockpit-ostree \
     duf \
     eza \
     fastfetch \
