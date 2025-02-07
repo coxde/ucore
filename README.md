@@ -8,7 +8,8 @@ This repository is for my personal OS image, very much based on my own needs. It
 
 ## Features ✨
 
--   Fish and other useful tools
+-   Fish and other useful CLI tools
+-   Native Cockpit with more extensions
 -   Some tweaks compared to the upstream
 
 ## Installation ⚙️
