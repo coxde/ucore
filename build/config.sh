@@ -35,5 +35,5 @@ EOF
 
 # Enable systemd services
 systemctl enable tailscaled.service
-systemctl enable cockpit.service
+systemctl enable cockpit.socket
 systemctl enable docker.service
