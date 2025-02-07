@@ -13,8 +13,10 @@ dnf5 -y install \
     fastfetch \
     fd-find \
     fish \
+    google-authenticator \
     lnav \
     ncdu \
+    qrencode-libs \
     restic \
     ugrep \
     zoxide

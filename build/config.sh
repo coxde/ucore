@@ -33,6 +33,10 @@ tee /etc/ssh/sshd_config.d/40-disable-passwords.conf <<EOF
 PasswordAuthentication no
 EOF
 
+# Add TOTP to Cockpit PAM
+sed -i '/auth[[:space:]]*substack[[:space:]]*password-auth/a auth       required     pam_google_authenticator.so' /etc/pam.d/cockpit
+
+
 # Enable systemd services
 systemctl enable tailscaled.service
 systemctl enable cockpit.socket
