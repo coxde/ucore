@@ -6,7 +6,7 @@ on:
         paths-ignore:
             - '**.md'
     schedule:
-        - cron: '30 4 * * *' # At 04:30 UTC everyday.
+        - cron: '30 4 * * 0' # At 04:30 on every Sunday.
     workflow_dispatch:
 
 env:
