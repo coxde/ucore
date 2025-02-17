@@ -36,8 +36,7 @@ EOF
 # Add TOTP to Cockpit PAM
 sed -i '/auth[[:space:]]*substack[[:space:]]*password-auth/a auth       required     pam_google_authenticator.so' /etc/pam.d/cockpit
 
-
 # Enable systemd services
 systemctl enable tailscaled.service
 systemctl enable cockpit.socket
-systemctl enable docker.service
+systemctl enable podman.socket
