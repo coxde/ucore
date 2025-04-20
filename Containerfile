@@ -17,5 +17,5 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     /ctx/build.sh && \
     ostree container commit
 
-# Linting
-RUN bootc container lint
+# Linting (Unsupported, disable for now)
+# RUN bootc container lint
