@@ -50,7 +50,7 @@ jobs:
                   echo "build_date=$(date -u +%Y\-%m\-%d\T%H\:%M\:%S\Z)" >> $GITHUB_OUTPUT
                   echo "tag_date=$(date -u +%Y%m%d)" >> $GITHUB_OUTPUT
 
-            - name: Fetch upstream versions
+            - name: Fetch Upstream Versions
               id: fetch
               run: |
                   skopeo inspect docker://ghcr.io/ublue-os/ucore:stable > inspect.json
