@@ -1,21 +1,25 @@
-# Build context
-FROM scratch AS ctx
-COPY build_files /
-
-# Base image
-FROM ghcr.io/ublue-os/ucore:stable AS base
-
-# Environments
+# Global build variables
 ARG IMAGE_NAME="${IMAGE_NAME:-ucore}"
 ARG IMAGE_VENDOR="${IMAGE_VENDOR:-coxde}"
+
+# Stage 1: Build context
+FROM scratch AS ctx
+COPY /build_files /build_files
+
+# Stage 2: Base image
+FROM ghcr.io/ublue-os/ucore:stable
+
+# Use variables in this stage
+ARG IMAGE_NAME
+ARG IMAGE_VENDOR
 
 # Build
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     --mount=type=cache,dst=/var/cache \
     --mount=type=cache,dst=/var/log \
     --mount=type=tmpfs,dst=/tmp \
-    /ctx/build.sh && \
+    /ctx/build_files/build.sh && \
     ostree container commit
 
-# Linting (Unsupported, disable for now)
-# RUN bootc container lint
+# Linting
+RUN bootc container lint
