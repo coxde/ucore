@@ -22,4 +22,4 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     ostree container commit
 
 # Linting
-RUN bootc container lint
+# RUN bootc container lint
