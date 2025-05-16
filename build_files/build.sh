@@ -3,13 +3,13 @@
 set -ouex pipefail
 
 echo "::group:: ===== Manage Packages ====="
-/ctx/packages.sh
+/ctx/build_files/01-packages.sh
 echo "::endgroup::"
 
 echo "::group:: ===== Configure System ====="
-/ctx/config.sh
+/ctx/build_files/06-config.sh
 echo "::endgroup::"
 
 echo "::group:: ===== Clean System ====="
-/ctx/cleanup.sh
+/ctx/build_files/99-cleanup.sh
 echo "::endgroup::"
