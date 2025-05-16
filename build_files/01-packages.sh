@@ -2,14 +2,13 @@
 
 set -ouex pipefail
 
-# Install packages
+# Install packages (TODO: add eza when F42 pkg available)
 dnf5 -y install \
     btop \
     cockpit \
     cockpit-files \
     cockpit-ostree \
     duf \
-    eza \
     fastfetch \
     fd-find \
     fish \
