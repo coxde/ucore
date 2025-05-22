@@ -8,7 +8,6 @@ dnf5 -y install \
     cockpit \
     cockpit-files \
     cockpit-ostree \
-    duf \
     fastfetch \
     fd-find \
     fish \
