@@ -22,7 +22,7 @@ dnf5 -y install \
 # Install 3rd party packages
 ## eza
 curl --retry 3 -L -s https://github.com/eza-community/eza/releases/latest/download/eza_x86_64-unknown-linux-gnu.tar.gz | tar xz
-install -Dm0755 -t /usr/local/bin/ eza
+install -m0755 -t /usr/local/bin/ eza
 rm -f eza
 
 curl --retry 3 --create-dirs -Lo \
