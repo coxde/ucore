@@ -2,7 +2,7 @@
 
 set -ouex pipefail
 
-# Install packages (TODO: add eza when F42 pkg available)
+# Install packages
 dnf5 -y install \
     btop \
     cockpit \
@@ -18,3 +18,8 @@ dnf5 -y install \
     restic \
     ugrep \
     zoxide
+
+# Install COPR packages
+dnf5 -y copr enable alternateved/eza
+dnf5 -y install eza
+dnf5 -y copr disable alternateved/eza
