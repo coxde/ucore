@@ -40,3 +40,7 @@ sed -i '/auth[[:space:]]*substack[[:space:]]*password-auth/a auth       required
 systemctl enable tailscaled.service
 systemctl enable cockpit.socket
 systemctl enable podman.socket
+
+# Configure Updates
+sed -i 's|#AutomaticUpdatePolicy.*|AutomaticUpdatePolicy=stage|' /etc/rpm-ostreed.conf
+sed -i 's|#LockLayering.*|LockLayering=true|' /etc/rpm-ostreed.conf
