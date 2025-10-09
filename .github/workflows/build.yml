@@ -1,5 +1,8 @@
 name: Build Image
 on:
+    push:
+        branches:
+            - "renovate/**"
     pull_request:
         branches:
             - main
