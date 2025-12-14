@@ -6,4 +6,5 @@ set -ouex pipefail
 dnf5 -y install \
     cockpit \
     cockpit-files \
-    cockpit-ostree
+    cockpit-ostree \
+    gcc
