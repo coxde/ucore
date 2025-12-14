@@ -6,6 +6,4 @@ set -ouex pipefail
 dnf5 -y install \
     cockpit \
     cockpit-files \
-    cockpit-ostree \
-    google-authenticator \
-    qrencode-libs
+    cockpit-ostree
