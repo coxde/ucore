@@ -8,9 +8,9 @@ This repository is for my personal OS image, very much based on my own needs. It
 
 ## Features ✨
 
--   Fish and other useful CLI tools
+-   Homebrew pre-installed, easy to install Fish and other useful CLI tools
 -   Native Cockpit with more extensions
--   Some tweaks compared to the upstream
+-   Some configuration tweaks compared to the upstream
 
 ## Installation ⚙️
 
@@ -28,6 +28,5 @@ cosign verify --key cosign.pub ghcr.io/coxde/ucore
 
 ## Credits 💌
 
--   [Universal Blue](https://universal-blue.org/)
--   [BlueBuild](https://blue-build.org/)
--   [uCore](https://ucore.gg/)
+-   [uCore](https://github.com/ublue-os/ucore/)
+-   [Project Bluefin](https://github.com/projectbluefin/)
