@@ -2,6 +2,10 @@
 
 set -ouex pipefail
 
+echo "::group:: ===== Copy Files ====="
+cp -avf "/ctx/files"/. /
+echo "::endgroup::"
+
 echo "::group:: ===== Manage Packages ====="
 /ctx/build_files/01-packages.sh
 echo "::endgroup::"

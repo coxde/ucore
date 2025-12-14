@@ -41,6 +41,10 @@ systemctl enable tailscaled.service
 systemctl enable cockpit.socket
 systemctl enable podman.socket
 
+systemctl enable brew-setup.service
+systemctl enable brew-upgrade.timer
+systemctl enable brew-update.timer
+
 # Configure Updates
 sed -i 's|#AutomaticUpdatePolicy.*|AutomaticUpdatePolicy=apply|' /etc/rpm-ostreed.conf
 sed -i 's|#LockLayering.*|LockLayering=true|' /etc/rpm-ostreed.conf

@@ -5,6 +5,7 @@ ARG IMAGE_VENDOR="${IMAGE_VENDOR:-coxde}"
 # Stage 1: Build context
 FROM scratch AS ctx
 COPY /build_files /build_files
+COPY --from=ghcr.io/projectbluefin/brew:latest /system_files /files
 
 # Stage 2: Base image
 FROM ghcr.io/ublue-os/ucore:stable
