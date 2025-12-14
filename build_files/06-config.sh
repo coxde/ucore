@@ -19,6 +19,11 @@ tee -a /etc/default/tailscaled <<EOF
 TS_NO_LOGS_NO_SUPPORT=true
 EOF
 
+# Disable Homebrew telemetry
+tee -a /etc/environment <<EOF
+HOMEBREW_NO_ANALYTICS=1
+EOF
+
 # Enable Firewalld logging
 sed -i 's/\s*LogDenied=.*$/LogDenied=all/g' /etc/firewalld/firewalld.conf
 
@@ -32,9 +37,6 @@ tee /etc/ssh/sshd_config.d/40-disable-passwords.conf <<EOF
 # PasswordAuthentication.
 PasswordAuthentication no
 EOF
-
-# Add TOTP to Cockpit PAM
-sed -i '/auth[[:space:]]*substack[[:space:]]*password-auth/a auth       required     pam_google_authenticator.so' /etc/pam.d/cockpit
 
 # Enable systemd services
 systemctl enable tailscaled.service
