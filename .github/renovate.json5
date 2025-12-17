@@ -5,7 +5,7 @@
         {
             "enabled": false,
             "matchUpdateTypes": ["digest", "pinDigest", "pin"],
-            "matchDepNames": ["ghcr.io/ublue-os/ucore", "ghcr.io/projectbluefin/brew"]
+            "matchDepNames": ["ghcr.io/ublue-os/ucore", "ghcr.io/ublue-os/brew"]
         },
         {
             "matchUpdateTypes": ["minor", "patch", "pin", "pinDigest", "digest"],
